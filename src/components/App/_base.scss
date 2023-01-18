@@ -39,6 +39,8 @@ body {
   section {
     @include for-size(mobile) {
       padding-bottom: 30px;
+      padding-left: 0;
+      padding-right: 0;
     }
     @include for-size(desktop) {
       padding-bottom: 80px;
