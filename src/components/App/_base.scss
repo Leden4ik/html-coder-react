@@ -1,5 +1,6 @@
 @import "vars";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 html, body {
   min-width: 320px;
   background-color: #FFFFFF;
@@ -7,7 +8,11 @@ html, body {
   font-size: 16px;
   line-height: 1;
 }
-body {
+
+.hc__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   section, header, footer {
 
     width: 100%;
@@ -28,8 +33,9 @@ body {
       margin-right: auto;
     }
   }
+
   section {
-    @include for-size(until-mobile) {
+    @include for-size(mobile) {
       padding-bottom: 30px;
     }
     @include for-size(desktop) {
@@ -57,8 +63,6 @@ body {
     display: block;
   }
 }
-
-//-------
 
 .hc-icon--account {
   &:before {
