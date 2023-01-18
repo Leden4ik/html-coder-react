@@ -8,7 +8,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css';
 import "swiper/css/effect-fade";
 import 'swiper/css/pagination';
-import "./_categories.scss"
+import "./style.scss"
 import "./../App/_button.scss";
 
 // import required modules

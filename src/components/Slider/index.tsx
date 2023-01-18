@@ -1,16 +1,17 @@
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 // Import Swiper styles
 import 'swiper/css';
 import "swiper/css/effect-fade";
 import 'swiper/css/pagination';
-import  "./_slider.scss"
+import "./style.scss"
 import "./../App/_button.scss";
 // import required modules
-import { Autoplay, EffectFade,  Pagination } from 'swiper';
+import {Autoplay, EffectFade, Pagination} from 'swiper';
+
 const Slider = () => {
-    return(
+    return (
         <section className='hc__slider'>
             <Swiper
                 spaceBetween={30}
@@ -67,4 +68,4 @@ const Slider = () => {
         </section>
     )
 }
-export default  Slider;
+export default Slider;
