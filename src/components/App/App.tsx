@@ -11,8 +11,8 @@ function App() {
         <main>
             <Slider/>
             <Categories/>
-            <ContentList/>
             <Content/>
+            <ContentList/>
             <Footer/>
         </main>
     );
