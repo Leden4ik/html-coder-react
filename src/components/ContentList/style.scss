@@ -1,4 +1,5 @@
 @import "./../App/vars";
+
 .hc__info {
   &--list {
     display: flex;
@@ -14,6 +15,7 @@
       justify-content: center;
     }
   }
+
   &--item {
     display: flex;
     flex-direction: column;
@@ -26,12 +28,13 @@
       flex-basis: 48%;
     }
     @include for-size(mobile) {
-    padding: 20px 0;
+      padding: 20px 0;
     }
     @include for-size(desktop) {
       height: 130px;
     }
   }
+
   &--name {
     font-weight: 700;
 

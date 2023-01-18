@@ -1,8 +1,10 @@
 @import "./../App/vars";
+
 .hc__categories {
   &--box {
     position: relative;
     overflow: hidden;
+
     .swiper-slide {
 
       /* Center slide text vertically */
@@ -11,6 +13,7 @@
       align-items: center;
       flex-direction: column;
     }
+
     .swiper-slide img {
       display: block;
       width: 100%;
@@ -18,17 +21,20 @@
       object-fit: cover;
     }
   }
+
   &--list {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
   &--name {
     font-weight: 700;
     color: #212121;
     margin-top: 14px;
     padding-bottom: 10PX;
   }
+
   &--title {
     font-weight: 700;
     @include for-size(touching) {
@@ -40,6 +46,7 @@
       line-height: 26px;
     }
   }
+
   &--top {
     display: flex;
     align-items: center;
@@ -48,6 +55,7 @@
     @include for-size(mobile) {
       flex-direction: column;
     }
+
     &-left {
       display: flex;
       align-items: center;
@@ -59,6 +67,7 @@
         justify-content: space-between;
       }
     }
+
     &-right {
       @include for-size(mobile) {
         order: 1;
@@ -66,9 +75,11 @@
       padding-bottom: 20px;
     }
   }
+
   &--controle {
     display: flex;
     margin-left: 20px;
+
     &-next, &-prev {
       width: 46px;
       height: 46px;
@@ -79,22 +90,28 @@
       align-items: center;
       justify-content: center;
       margin: 0 5px;
+
       &.swiper-button-disabled {
         opacity: 0.5;
       }
     }
+
     &-prev {
       transform: rotate(180deg);
     }
   }
+
   &--button.hc__button__default {
     font-weight: 700;
     border-radius: 25px;
+
     &:after {
       border-radius: 25px;
     }
+
     padding-left: 24px;
     padding-right: 24px;
+
     .hc-icon--livechat {
       margin-left: 10px;
     }

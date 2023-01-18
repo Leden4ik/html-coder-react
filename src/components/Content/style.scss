@@ -1,8 +1,10 @@
 @import "./../App/vars";
+
 .hc__box {
   border: 1px solid #E2E0DF;
   overflow: hidden;
   border-radius: 16px;
+
   &--border {
     background-color: #FFFFFF;
     @include for-size(desktop) {

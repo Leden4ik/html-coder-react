@@ -127,6 +127,7 @@ $fullhd: 1344px + (2 * $gap) !default;
     }
   }
 }
+
 // Placeholders
 @mixin placeholder {
   $placeholders: "::-moz-" "::-webkit-input-" ":-moz-" ":-ms-input-" "::";
@@ -136,6 +137,7 @@ $fullhd: 1344px + (2 * $gap) !default;
     }
   }
 }
+
 // Text select - off
 @mixin unselectable {
   -webkit-user-select: none;
@@ -144,17 +146,21 @@ $fullhd: 1344px + (2 * $gap) !default;
   user-select: none;
   -webkit-touch-callout: none;
 }
+
 %unselectable {
   @include unselectable;
 }
+
 // drag - off
 @mixin undrag {
   user-drag: none;
   -webkit-user-drag: none;
 }
+
 %undrag {
   @include undrag;
 }
+
 @mixin clearfix {
   &::after {
     display: table;
@@ -162,9 +168,11 @@ $fullhd: 1344px + (2 * $gap) !default;
     content: " ";
   }
 }
+
 @mixin overflow-touch {
   -webkit-overflow-scrolling: touch;
 }
+
 @mixin loader {
   position: relative;
   display: block;
@@ -177,6 +185,7 @@ $fullhd: 1344px + (2 * $gap) !default;
   border-right-color: transparent;
   border-radius: $radius-rounded;
 }
+
 @mixin hamburger($dimensions: 0) {
   position: relative;
   display: block;
@@ -193,40 +202,49 @@ $fullhd: 1344px + (2 * $gap) !default;
     transition-property: background-color, opacity, transform;
     transform-origin: center;
     background-color: currentColor;
+
     &:nth-child(1) {
       left: calc(50% - 12px);
       top: calc(50% - 10px);
     }
+
     &:nth-child(3) {
       left: calc(50% - 12px);
       top: calc(50% - 3px);
     }
+
     &:nth-child(5) {
       left: calc(50% - 12px);
       top: calc(50% + 3px);
     }
+
     &:nth-child(7) {
       left: calc(50% - 12px);
       top: calc(50% + 10px);
     }
+
     &:nth-child(2) {
       left: calc(50% + 2px);
       top: calc(50% - 10px);
     }
+
     &:nth-child(4) {
       left: calc(50% + 2px);
       top: calc(50% - 3px);
     }
+
     &:nth-child(6) {
       left: calc(50% + 2px);
       top: calc(50% + 3px);
     }
+
     &:nth-child(8) {
       left: calc(50% + 2px);
       top: calc(50% + 10px);
     }
   }
 }
+
 @mixin arrow($color: transparent, $rotate: -45deg, $bsize: 3px) {
   &:before {
     position: absolute;
@@ -249,6 +267,7 @@ $fullhd: 1344px + (2 * $gap) !default;
     border-radius: 2px;
   }
 }
+
 @mixin overlay($offset: 0) {
   position: absolute;
   top: $offset;
@@ -256,6 +275,7 @@ $fullhd: 1344px + (2 * $gap) !default;
   bottom: $offset;
   left: $offset;
 }
+
 //-----------------------------------------------------------------------
 // Convert font-size from px to rem with px fallback
 // @param $size - the value in pixel you want to convert

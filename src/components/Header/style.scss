@@ -1,8 +1,8 @@
 @import "./../App/vars";
 
 .hc__header {
-
   position: relative;
+
   &--phone {
     display: flex;
 
@@ -19,13 +19,13 @@
       @include for-size(desktop) {
         font-size: 22px;
         .hc__header--nav-text {
-          border-bottom: 1px solid rgba(72, 89, 240, 0.3);;
+          border-bottom: 1px solid rgba(72, 89, 240, 0.3);
         }
       }
       @include for-size(touching) {
         background-color: #fff;
       }
-      color: #4859F0;
+      color: #4859f0;
     }
   }
 
@@ -57,6 +57,7 @@
     @include for-size(touching) {
       padding-left: 46px;
     }
+
     &-link {
       font-weight: 700;
       font-size: 37px;
@@ -86,7 +87,7 @@
     }
 
     &-form {
-      background: #F5F5F5;
+      background: #f5f5f5;
       border-radius: 8px;
       display: flex;
       max-height: 45px;
@@ -97,7 +98,6 @@
     }
 
     &-button {
-
     }
   }
 
@@ -114,6 +114,7 @@
       max-width: 48%;
       order: 2;
     }
+
     &-text {
       @include for-size(touching) {
         display: none;
@@ -121,7 +122,6 @@
     }
 
     &-item {
-
       @include for-size(desktop) {
         padding: 0 10px;
       }
@@ -136,34 +136,34 @@
     }
 
     &-top {
-
       @include for-size(desktop) {
         margin-bottom: 9px;
       }
       @include for-size(touching) {
         display: none;
       }
+
       .hc__header--menu-link {
-        color: #4859F0;
+        color: #4859f0;
         border-bottom: 1px solid rgba(72, 89, 240, 0.3);
       }
     }
-
 
     &-link {
       &:before {
         width: 35px;
         height: 39px;
       }
-      &[data-cart-qut], {
+
+      &[data-cart-qut] {
         position: relative;
 
         &:after {
           content: attr(data-cart-qut);
           display: block;
           color: #fff;
-          background-color: #4A5BF1;
-          border: 2px solid #DADEFC;
+          background-color: #4a5bf1;
+          border: 2px solid #dadefc;
           border-radius: 10px;
           font-size: 12px;
           position: absolute;
@@ -186,18 +186,18 @@
   }
 
   &--nav {
-  @include for-size(desktop) {
-    padding-top: 10px;
-  }
-  @include for-size(touching) {
-    width: calc(100% - 3.25rem);
+    @include for-size(desktop) {
+      padding-top: 10px;
+    }
+    @include for-size(touching) {
+      width: calc(100% - 3.25rem);
 
-    border-bottom-right-radius: 16px;
-  }
+      border-bottom-right-radius: 16px;
+    }
+
     &-list {
       display: flex;
       @include for-size(desktop) {
-
         align-items: center;
         align-content: center;
       }
@@ -237,9 +237,9 @@
       }
       color: #212121;
       font-weight: 400;
-
     }
-    @include for-size(touching){
+
+    @include for-size(touching) {
       position: absolute;
       left: -100%;
       transition-timing-function: ease-out;
@@ -265,7 +265,7 @@
         transition-timing-function: ease-out;
         transition-duration: 86ms;
         transition-property: background-color, opacity, transform;
-        transform-origin: center
+        transform-origin: center;
       }
 
       @include for-size(desktop) {
@@ -287,14 +287,14 @@
   }
 }
 
-[name='hc__menu--mobile'] {
-
+[name="hc__menu--mobile"] {
   &:checked {
     ~ .hc__header--box {
       .hc__header--mb-burger {
         left: calc(100% - 48px);
         background-color: #fff;
         width: 48px;
+
         span {
           &:nth-child(1) {
             //transform: translateY(9px) rotate(45deg);
@@ -331,10 +331,10 @@
           }
         }
       }
+
       .hc__header--nav {
         left: 0;
       }
-
     }
   }
 }
