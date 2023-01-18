@@ -1,3 +1,54 @@
+$black: hsl(0, 0%, 4%) !default;
+$black-bis: hsl(0, 0%, 7%) !default;
+$black-ter: hsl(0, 0%, 14%) !default;
+$grey-darker: hsl(0, 0%, 21%) !default;
+$grey-dark: hsl(0, 0%, 29%) !default;
+$grey: hsl(0, 0%, 48%) !default;
+$grey-light: hsl(0, 0%, 71%) !default;
+$grey-lighter: hsl(0, 0%, 86%) !default;
+$white-ter: hsl(0, 0%, 96%) !default;
+$white-bis: hsl(0, 0%, 98%) !default;
+$white: hsl(0, 0%, 100%) !default;
+$orange: hsl(14, 100%, 53%) !default;
+$yellow: hsl(48, 100%, 67%) !default;
+$green: hsl(141, 71%, 48%) !default;
+$turquoise: hsl(171, 100%, 41%) !default;
+$cyan: hsl(204, 86%, 53%) !default;
+$blue: hsl(217, 71%, 53%) !default;
+$purple: hsl(271, 100%, 71%) !default;
+$red: hsl(348, 100%, 61%) !default;
+// Typography
+$family-sans-serif: "PT Sans", sans-serif !default;
+$family-bebas-neue: "Bebas Neue", sans-serif !default;
+$family-bebas-neue-book: "Bebas Neue Book", sans-serif !default;
+$family-monospace: monospace !default;
+$render-mode: optimizeLegibility !default;
+$font-size: 16px !default;
+$size-1: 3rem !default;
+$size-2: 2.5rem !default;
+$size-3: 2rem !default;
+$size-4: 1.5rem !default;
+$size-5: 1.25rem !default;
+$size-6: 1rem !default;
+$size-7: .75rem !default;
+$weight-light: 300 !default;
+$weight-normal: 400 !default;
+$weight-medium: 500 !default;
+$weight-semibold: 600 !default;
+$weight-bold: 700 !default;
+// Spacing
+$block-spacing: 1.5rem !default;
+// Miscellaneous
+$easing: ease-out !default;
+$radius-small: 2px !default;
+$radius: 8px !default;
+$radius-large: 6px !default;
+$radius-rounded: 290486px !default;
+$speed: 86ms !default;
+$size-small: $size-7 !default;
+$size-normal: $size-6 !default;
+$size-medium: $size-5 !default;
+$size-large: $size-4 !default;
 // The container horizontal gap, which acts as the offset for breakpoints
 $gap: 32px !default;
 $mobile: 576px !default;
@@ -76,4 +127,163 @@ $fullhd: 1344px + (2 * $gap) !default;
     }
   }
 }
-
+// Placeholders
+@mixin placeholder {
+  $placeholders: "::-moz-" "::-webkit-input-" ":-moz-" ":-ms-input-" "::";
+  @each $placeholder in $placeholders {
+    &#{$placeholder}placeholder {
+      @content
+    }
+  }
+}
+// Text select - off
+@mixin unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+%unselectable {
+  @include unselectable;
+}
+// drag - off
+@mixin undrag {
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+%undrag {
+  @include undrag;
+}
+@mixin clearfix {
+  &::after {
+    display: table;
+    clear: both;
+    content: " ";
+  }
+}
+@mixin overflow-touch {
+  -webkit-overflow-scrolling: touch;
+}
+@mixin loader {
+  position: relative;
+  display: block;
+  width: 1em;
+  height: 1em;
+  content: "";
+  animation: spinAround 500ms infinite linear;
+  border: 2px solid $grey-lighter;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: $radius-rounded;
+}
+@mixin hamburger($dimensions: 0) {
+  position: relative;
+  display: block;
+  width: $dimensions;
+  height: $dimensions;
+  cursor: pointer;
+  span {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 1px;
+    transition-timing-function: $easing;
+    transition-duration: $speed;
+    transition-property: background-color, opacity, transform;
+    transform-origin: center;
+    background-color: currentColor;
+    &:nth-child(1) {
+      left: calc(50% - 12px);
+      top: calc(50% - 10px);
+    }
+    &:nth-child(3) {
+      left: calc(50% - 12px);
+      top: calc(50% - 3px);
+    }
+    &:nth-child(5) {
+      left: calc(50% - 12px);
+      top: calc(50% + 3px);
+    }
+    &:nth-child(7) {
+      left: calc(50% - 12px);
+      top: calc(50% + 10px);
+    }
+    &:nth-child(2) {
+      left: calc(50% + 2px);
+      top: calc(50% - 10px);
+    }
+    &:nth-child(4) {
+      left: calc(50% + 2px);
+      top: calc(50% - 3px);
+    }
+    &:nth-child(6) {
+      left: calc(50% + 2px);
+      top: calc(50% + 3px);
+    }
+    &:nth-child(8) {
+      left: calc(50% + 2px);
+      top: calc(50% + 10px);
+    }
+  }
+}
+@mixin arrow($color: transparent, $rotate: -45deg, $bsize: 3px) {
+  &:before {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: .625em;
+    height: .625em;
+    margin-top: -.4375em;
+    content: "";
+    transition-timing-function: $easing;
+    transition-duration: $speed;
+    transition-property: transform;
+    transform: rotate($rotate);
+    transform-origin: center;
+    pointer-events: none;
+    border-left: $bsize solid $color;
+    border-bottom: $bsize solid $color;
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-radius: 2px;
+  }
+}
+@mixin overlay($offset: 0) {
+  position: absolute;
+  top: $offset;
+  right: $offset;
+  bottom: $offset;
+  left: $offset;
+}
+//-----------------------------------------------------------------------
+// Convert font-size from px to rem with px fallback
+// @param $size - the value in pixel you want to convert
+// e.g. p {@include fontSize(12px);}
+//-----------------------------------------------------------------------
+// Function for converting a px based font-size to rem.
+//@function calculateRem($size) {
+//  $remSize: math.div($size, $font-size);
+//  //Default font size on html element is 100%, equivalent to 16px;
+//  @return #{$remSize}rem;
+//}
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+//@mixin fontSize($size) {
+//  //font-size: $size;
+//  font-size: calculateRem($size);
+//}
+//-----------------------------------------------------------------------
+//  Function to remove units
+//  http://stackoverflow.com/questions/12328259/how-do-you-strip-the-unit-from-any-number-in-sass
+//-----------------------------------------------------------------------
+//@function strip-units($number) {
+//  @return math.div($number, ($number * 0 + 1));
+//}
+//-----------------------------------------------------------------------
+//  Font/Line Height
+//  pass in the photoshop font size and line height in the same order
+//  they're displayed in the character window
+//-----------------------------------------------------------------------
+//@mixin line-height($ps-font-size, $ps-line-height: $ps-font-size) {
+//  line-height: math.div(strip-units($ps-line-height), strip-units($ps-font-size));
+//}

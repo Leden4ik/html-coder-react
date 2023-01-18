@@ -1,0 +1,121 @@
+@import "./../App/vars";
+.hs__slider {
+  &--box {
+    height: 675px;
+  }
+
+  &--list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    will-change: transform;
+    box-sizing: content-box;
+    .swiper-pagination {
+      text-align: right;
+      padding-right: 20px;
+
+      & .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        background: #fff;
+        opacity: .2;
+        margin: 0 5px;
+        border-radius: 20px;
+        transition: opacity .5s, background-color .5s, width .5s;
+        transition-delay: .5s, .5s, 0s;
+      }
+
+      & .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: #ffffff;
+        width: 26px;
+        -webkit-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+      }
+    }
+
+  }
+
+  &--content {
+    position: relative;
+    z-index: 2;
+    max-width: 582px;
+    padding: 40px 60px;
+  }
+
+  &--title {
+    font-weight: 700;
+    color: #FFFFFF;
+    @include for-size(desktop) {
+      padding-bottom: 120px;
+      font-size: 46px;
+      line-height: 56px;
+    }
+    @include for-size(tablet-only) {
+      padding-bottom: 60px;
+      font-size: 36px;
+      line-height: 46px;
+    }
+    @include for-size(mobile) {
+      padding-bottom: 60px;
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+
+  &--button {
+    max-width: 320px;
+  }
+
+  &--item {
+    @include for-size(desktop) {
+      height: 675px;
+    }
+    @include for-size(touching) {
+      height: 475px;
+    }
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+    @include for-size(desktop) {
+      border-radius: 16px;
+    }
+    @include for-size(touching) {
+      border-radius: 0px;
+    }
+    &:after {
+      background-image: url('../../../public/img/slider/bg-slide.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      @include undrag;
+    }
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      display: block;
+      content: '';
+      width: 80%;
+      height: 100%;
+      @include undrag;
+      background: linear-gradient(90.36deg, #1F2670 29.82%, rgba(39, 48, 139, 0) 99.68%);
+    }
+  }
+
+}
