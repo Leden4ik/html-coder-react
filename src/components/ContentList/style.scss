@@ -2,10 +2,17 @@
 .hc__info {
   &--list {
     display: flex;
-    justify-content: space-around;
     max-width: 1008px;
     margin-left: auto;
     margin-right: auto;
+    @include for-size(desktop) {
+
+      justify-content: space-around;
+    }
+    @include for-size(touching) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
   &--item {
     display: flex;
@@ -13,11 +20,29 @@
     align-content: center;
     align-items: center;
     justify-content: space-between;
-    height: 130px;
+    width: 100%;
+    @include for-size(tablet-only) {
+      max-width: 48%;
+      flex-basis: 48%;
+    }
+    @include for-size(mobile) {
+    padding: 20px 0;
+    }
+    @include for-size(desktop) {
+      height: 130px;
+    }
   }
   &--name {
     font-weight: 700;
-    font-size: 25px;
+
+    @include for-size(desktop) {
+      font-size: 25px;
+    }
+
+    @include for-size(touching) {
+      font-size: 20px;
+      text-align: center;
+    }
     color: #212121;
   }
 }
