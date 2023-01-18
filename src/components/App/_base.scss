@@ -1,0 +1,42 @@
+@import "vars";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+html, body {
+  min-width: 320px;
+  background-color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+}
+body {
+  section, header, footer {
+
+    width: 100%;
+    @include for-size(until-mobile) {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    @include for-size(tablet-only) {
+
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    @include for-size(desktop) {
+      padding-left: 24px;
+      padding-right: 24px;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  section {
+    @include for-size(until-mobile) {
+      padding-bottom: 30px;
+    }
+    @include for-size(desktop) {
+      padding-bottom: 80px;
+    }
+    @include for-size(tablet-only) {
+      padding-bottom: 50px;
+    }
+  }
+}
