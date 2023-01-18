@@ -2,17 +2,20 @@ import "./style.scss"
 
 const ContentList = () => {
     return (
-        <section className="hc__content">
-            <div className="hc__content--box">
-                <div className="hc__box--border">
-                    <div className="hc__box--content">
-                        <div className="hc__box--title">Large Inventory Of Power Tools &amp; Accessories</div>
-                        <div className="hc__box--text">Find the Aluminum and Stainless Steel items for your project in
-                            stock and ready to ship today! Avoid project delays and long lead times in a challenging
-                            supply chain for specialty metals and non-ferrous items. We are well stocked and here to
-                            serve you with guided support.
-                        </div>
-                        <div className="hc__button__default hc__box--button">Shop Now</div>
+        <section className="hc__info">
+            <div className="hc__info--box">
+                <div className="hc__info--list">
+                    <div className="hc__info--item">
+                        <div className="hc__info-icon hc-icon--catalog hc-icon--catalog-dims" />
+                        <div className="hc__info--name">Products Catalog</div>
+                    </div>
+                    <div className="hc__info--item">
+                        <div className="hc__info-icon hc-icon--support hc-icon--support-dims" />
+                        <div className="hc__info--name">24/7 Customer Support</div>
+                    </div>
+                    <div className="hc__info--item">
+                        <div className="hc__info-icon hc-icon--ideas hc-icon--ideas-dims" />
+                        <div className="hc__info--name">Product Ideas</div>
                     </div>
                 </div>
             </div>
