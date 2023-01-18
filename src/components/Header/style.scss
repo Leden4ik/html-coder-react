@@ -151,8 +151,10 @@
 
     &-link {
       &:before {
-        width: 35px;
-        height: 39px;
+        @include for-size(touching) {
+          width: 40px;
+          height: 39px;
+        }
       }
 
       &[data-cart-qut] {
@@ -169,11 +171,17 @@
           position: absolute;
           height: 21px;
           text-align: center;
-          left: 23px;
+
+          @include for-size(desktop) {
+            left: 23px;
+          }
           padding: 4px;
           top: 0;
           width: auto;
           white-space: nowrap;
+          @include for-size(touching) {
+            right: -2px;
+          }
         }
       }
 
