@@ -1,16 +1,26 @@
 @import "./../App/vars";
 .hc__box {
+  border: 1px solid #E2E0DF;
+  overflow: hidden;
+  border-radius: 16px;
   &--border {
     background-color: #FFFFFF;
-    border-radius: 16px;
-    padding: 131px 75px;
+    @include for-size(desktop) {
+      padding: 131px 75px;
+    }
+    @include for-size(tablet-only) {
+
+      padding: 80px 60px;
+    }
+    @include for-size(mobile) {
+      padding: 50px 40px;
+    }
     display: flex;
     position: relative;
 
     &:after {
       background-image: url('../../../public/img/bg-block.jpg');
       background-size: auto 100%;
-      border: 1px solid #E2E0DF;
       background-repeat: no-repeat;
       background-position: 100% 0;
       display: block;
@@ -22,6 +32,9 @@
       min-width: 682px;
       width: 54%;
       @include undrag;
+      @include for-size(mobile) {
+        opacity: 0.8;
+      }
     }
 
     &:before {
@@ -36,6 +49,11 @@
       height: 100%;
       @include undrag;
       background: linear-gradient(90deg, #FFFFFF 7.65%, rgba(255, 255, 255, 0.92) 23.96%, rgba(255, 255, 255, 0) 73.83%);
+      @include for-size(mobile) {
+        width: 100%;
+        min-width: 0;
+        background: linear-gradient(90deg, #FFFFFF 7.65%, rgba(255, 255, 255, 1) 23.96%, rgba(255, 255, 255, 0.5) 73.83%);
+      }
     }
   }
 

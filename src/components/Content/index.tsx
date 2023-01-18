@@ -3,7 +3,7 @@ import "./style.scss"
 const Content = () => {
     return (
         <section className="hc__content">
-            <div className="hc__content--box">
+            <div className="hc__box">
                 <div className="hc__box--border">
                     <div className="hc__box--content">
                         <div className="hc__box--title">Large Inventory Of Power Tools &amp; Accessories</div>
