@@ -1,10 +1,11 @@
 @import "vars";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
-html, body {
+html,
+body {
   min-width: 320px;
-  background-color: #FFFFFF;
-  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 1;
 }
@@ -14,15 +15,15 @@ html, body {
   flex-direction: column;
   justify-content: space-between;
 
-  section, header, footer {
-
+  section,
+  header,
+  footer {
     width: 100%;
     @include for-size(until-mobile) {
       padding-left: 8px;
       padding-right: 8px;
     }
     @include for-size(tablet-only) {
-
       padding-left: 12px;
       padding-right: 12px;
     }
@@ -52,7 +53,8 @@ html, body {
   background: url("../../../public/img/svg/sprite.view.svg") no-repeat;
 }
 
-[class^="hc-icon"], [class*=" hc-icon"] {
+[class^="hc-icon"],
+[class*=" hc-icon"] {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -233,3 +235,11 @@ html, body {
   }
 }
 
+@keyframes shine {
+  from {
+    mask-position: 150%;
+  }
+  to {
+    mask-position: -50%;
+  }
+}
