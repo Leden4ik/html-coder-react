@@ -24,6 +24,11 @@
     }
     @include for-size(mobile) {
       flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+    }
+    @include for-size(until-mobile) {
+      justify-content: flex-start;
     }
     display: flex;
 
@@ -31,6 +36,7 @@
       @include for-size(mobile) {
         margin-left: 20px;
         margin-right: 20px;
+        padding-bottom: 10px;
       }
       @include for-size(tablet-only) {
         margin-right: 20px;
