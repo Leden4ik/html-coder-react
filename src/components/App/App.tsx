@@ -1,11 +1,13 @@
 import React from 'react';
 import  "./_reset.scss"
 import  "./_base.scss"
+import Footer from './../Footer/Footer'
 
 function App() {
   return (
-    <div>
-    </div>
+    <main>
+      <Footer/>
+    </main>
   );
 }
 
