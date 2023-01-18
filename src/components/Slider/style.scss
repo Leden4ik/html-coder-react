@@ -44,8 +44,18 @@
   &--content {
     position: relative;
     z-index: 2;
-    max-width: 582px;
-    padding: 40px 60px;
+    height: 100%;
+    @include for-size(desktop) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 50%;
+      padding: 120px 60px 40px;
+    }
+    @include for-size(touching) {
+      max-width: 582px;
+      padding: 40px 60px;
+    }
   }
 
   &--title {

@@ -15,8 +15,12 @@
     .hc__header--nav-link {
       display: flex;
       border: none;
+      align-items: center;
       @include for-size(desktop) {
         font-size: 22px;
+        .hc__header--nav-text {
+          border-bottom: 1px solid rgba(72, 89, 240, 0.3);;
+        }
       }
       @include for-size(touching) {
         background-color: #fff;
@@ -78,6 +82,7 @@
 
     @include for-size(touching) {
       order: 3;
+      margin-top: 8px;
     }
 
     &-form {
@@ -167,6 +172,8 @@
           left: 23px;
           padding: 4px;
           top: 0;
+          width: auto;
+          white-space: nowrap;
         }
       }
 
@@ -184,6 +191,8 @@
   }
   @include for-size(touching) {
     width: calc(100% - 3.25rem);
+
+    border-bottom-right-radius: 16px;
   }
     &-list {
       display: flex;
@@ -216,13 +225,12 @@
       }
       @include for-size(touching) {
         align-items: center;
-        background: #f2f2f2;
+        background-color: #f2f2f2;
         border-bottom: 0.0625rem solid #e0e0e0;
         display: flex;
         line-height: 2rem;
         padding-bottom: 6px;
         padding-top: 6px;
-        pointer-events: none;
         font-size: 18px;
         padding-right: 20px;
         padding-left: 20px;

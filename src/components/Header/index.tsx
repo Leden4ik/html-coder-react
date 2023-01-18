@@ -86,7 +86,7 @@ const Header = () => {
                         <div className="hc__header--nav-item hc__header--phone">
                             <a className="hc__header--nav-link" href="tel:+(844) 434-672">
                                 <span className="hc-icon--phone hc-icon--phone-dims" />
-                                <span className="hc-icon--phone-text">+(844) 434-672</span>
+                                <span className="hc__header--nav-text">+(844) 434-672</span>
                             </a>
                         </div>
                     </div>
