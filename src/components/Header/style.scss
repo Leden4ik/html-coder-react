@@ -65,6 +65,7 @@
       /* identical to box height */
       text-transform: uppercase;
       color: #212121;
+      white-space: nowrap;
     }
 
     @include for-size(touching) {
@@ -116,6 +117,9 @@
     }
 
     &-text {
+      @include for-size(desktop) {
+        white-space: nowrap;
+      }
       @include for-size(touching) {
         display: none;
       }
@@ -123,7 +127,7 @@
 
     &-item {
       @include for-size(desktop) {
-        padding: 0 10px;
+        padding: 0 8px;
       }
       @include for-size(touching) {
         padding: 0 4px;
@@ -190,6 +194,7 @@
           display: none !important;
         }
       }
+
       @include for-size(desktop) {
         &:hover,
         &:focus {
