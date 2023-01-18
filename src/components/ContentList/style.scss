@@ -1,0 +1,23 @@
+@import "./../App/vars";
+.hc__info {
+  &--list {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1008px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &--item {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 130px;
+  }
+  &--name {
+    font-weight: 700;
+    font-size: 25px;
+    color: #212121;
+  }
+}
